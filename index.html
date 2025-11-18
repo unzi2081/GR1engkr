@@ -1,1 +1,36 @@
-<h>hello</h>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .pdf-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+
+  .pdf-viewer {
+    width: 100vh;      /* 회전 후 가로·세로가 뒤집히므로 vh/vw 반대로 */
+    height: 100vw;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    border: none;
+  }
+</style>
+</head>
+<body>
+  <div class="pdf-container">
+    <embed class="pdf-viewer" src="GR1engkr/root/1.pdf" type="application/pdf">
+  </div>
+</body>
+</html>
